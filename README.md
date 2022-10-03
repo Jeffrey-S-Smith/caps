@@ -23,7 +23,7 @@ Your tests must be running green on Github Actions
 Compose a UML or Process/Data Flow Diagram for every application
 
 UML Reference
-![UML](./img/lab11.png)
+[UML](./img/lab11.png)
 
 This should be the first thing you do when beginning work on a lab assignment.
 Draw the process/data flow of your application and map it to the code you will need to write or evaluate/fix.
