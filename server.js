@@ -1,19 +1,18 @@
-const { App } = require("uWebSockets.js");
-const { Server } = require("socket.io");
+'use strict';
 
-const app = new App();
-const io = new Server();
-const PORT = process.eventNames.PORT || 3002;
+const io = require('socket.io');
+const PORT = process.env.PORT || 3002;
 
-io.attachApp(app);
+let server = io(PORT); // point client to http://localhost:3002
 
-io.on("connection", (socket) => {
-  // ...
-});
+server.on('connection', (socket) => {
+  console.log('Client connected', socket.id);
 
-app.listen(PORT, (token) => {
-  if (!token) {
-    console.warn("port already in use");
-  }
+  socket.emit('welcome', {text: 'Welcome to our server'});
+  server.emit('new-user', {text: 'A new user has joined'});
+
+  socket.on('message', (payload) => {
+    socket.broadcast.emit('message', payload);
+  });
 });
 
