@@ -1,15 +1,14 @@
 'use strict';
 
-const eventPool = require('../eventPool');
+const events = require('../eventEmitter.js');
 
-module.exports = {
-  onDelivery: (payload) => {
-    console.log('payload coming into handleDriver: ', payload);
-    console.log(`DRIVER: picked up order # ${payload.orderId}`);
-    eventPool.emit('IN TRANSIT', payload);
-    console.log(`DRIVER: delivered order # ${payload.orderId}`);
-    eventPool.emit('DELIVERED', payload);
-    console.log(`Thank you, ${payload.customer}`);
+const handleDriver = (payload) => {
+  events.emit('global', payload);
+  if (payload.event === 'pickup') {
+    console.log('DRIVER: picked up e3669048-7313-427b-b6cc-74010ca1f8f0');
+  } else {
+    console.log('DRIVER: delivered up e3669048-7313-427b-b6cc-74010ca1f8f0');
   }
-};
+}
 
+module.exports = handleDriver;

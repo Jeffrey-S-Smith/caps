@@ -11,3 +11,6 @@ const logEvent = (eventName, payload) => {
 module.exports = (eventName, payload) => { 
   logEvent(eventName, payload)
 };
+
+'use strict'
+

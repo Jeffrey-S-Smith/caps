@@ -15,11 +15,13 @@ The following user/developer stories detail the major functionality for this pha
 - As a vendor, I want to be notified when my package has been delivered.
 
 ## Testing
+
 Write a complete set of tests for all functional units and modules
 Your tests must be running green on Github Actions
 [TESTS](./__tests__)
 
 ## Documentation
+
 Compose a UML or Process/Data Flow Diagram for every application
 UML Reference
 ![UML](img/lab%2011.png)
