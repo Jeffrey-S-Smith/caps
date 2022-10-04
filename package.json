@@ -5,5 +5,24 @@
     "socket.io": "^4.5.2",
     "socket.io-client": "^4.5.2",
     "supertest": "^6.2.4"
-  }
+  },
+  "scripts": {
+    "start": "node global/app.js"
+  },
+  "name": "caps",
+  "description": "## CAPS",
+  "version": "1.0.0",
+  "main": "chance.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeffrey-S-Smith/caps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jeffrey-S-Smith/caps/issues"
+  },
+  "homepage": "https://github.com/Jeffrey-S-Smith/caps#readme"
 }
