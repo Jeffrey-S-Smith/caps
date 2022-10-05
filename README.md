@@ -38,27 +38,3 @@ Heroku instruction code to start up server : node driver/index.js
 
 Local Server: node global/app.js
 
-Communication standards for computers.
-
-7 layers
-
-The top layer is more facing, the bottom layer is very Computer 
-
-7 layer application layer - HTTP / FTP / IMAP
-
-* Express == HTTP
-* Stateless, a request is sent and response returned.
-* Once response is returned connection is ended.
-
-TCP lives on the 4th layer _ Transport layer
-
-* Socket.io == TCP
-* Connection id sustained between 2  machines.
-* Full Duplex, information can flow between both machines simultaneously.
-
-- eventEmitter change to socketio.
-- client side
-- server side
-
-bottom layer physical(elections flowing between physical system)
-socket.io, socket.io-client
