@@ -9,9 +9,10 @@ describe('testing event handlers', () => {
     jest.spyOn(console, "log");
     jest.spyOn(events, "emit");
 
-    events.on('brightness', handleVendor);
-    events.emit('brightness', { brightness: 76 });
+    events.on('delivery', handleVendor);
+    events.emit('delivery', { delivery:  });
     expect(console.log).toHaveBeenCalledWith('Dilate pupils');
     expect(events.emit).toHaveBeenCalledWith('brain', 76);
   });
-  
+}
+

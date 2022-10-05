@@ -32,6 +32,12 @@ Draw the process/data flow of your application and map it to the code you will n
 
 ![UML](img/lab12.png)
 
+[Heroku](https://smith-caps.herokuapp.com/caps) 
+
+Heroku instruction code to start up server : node driver/index.js
+
+Local Server: node global/app.js
+
 Communication standards for computers.
 
 7 layers
