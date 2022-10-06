@@ -1,9 +1,10 @@
 'use strict';
 
-const body = require('./handleGlobal.js');
+const MessageClient = require('../queue-client/lib/messageClient.js');
+const cap = new MessageClient('1-206-flowers');
 
 setInterval(() => {
-  body.emit('pickup', { event: 'pickup',
+  cap.publish('pickup', { event: 'pickup',
 time: '2020-03-06T18:27:17.732Z',
 payload:
  { store: '1-206-flowers',
@@ -11,7 +12,7 @@ payload:
    customer: 'Jamal Braun',
    address: 'Schmittfort, LA' } });
 
-   body.emit('transit', { event: 'in-transit',
+   cap.publish('transit', { event: 'in-transit',
    time: '2020-03-06T18:27:18.738Z',
    payload:
     { store: '1-206-flowers',
@@ -19,7 +20,7 @@ payload:
       customer: 'Jamal Braun',
       address: 'Schmittfort, LA' } });
 
-      body.emit('delivery', { event: 'delivered',
+      cap.publish('delivery', { event: 'delivered',
    time: '2020-03-06T18:27:20.736Z',
    payload:
     { store: '1-206-flowers',
