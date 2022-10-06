@@ -37,11 +37,11 @@ messages.on('connection', (socket) => {
     console.log("MESSAGE REMOVED", payload);
     socket.to(payload.clientId).emit('delivered', receipt);
   });
-});
 
-socket.on('transit', (payload) => {
+  socket.on('transit', (payload) => {
   pickupQ.get(payload.clientId).forEach(message => {
     // this emits back to the same client that published the "get-messages"
     socket.emit('transit', message);
   });
-});
+  });
+})
